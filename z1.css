@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scrollbar-width: none; /* firefox */
+
+    -ms-overflow-style: none; /* IE 10+ */
+}
+*::-webkit-scrollbar{
+  display: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+#bgi{
+  background-image: url(./6.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-attachment: fixed;
+
+}
+
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+  height: 60px;
+  z-index: 1;
+
+	background-image: url(./33.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+/*    background-color: #000000; */
+    color: #000000;
+    text-align: center;
+}
+header h1{
+  color: white;
+}
+.placeholder{
+  width: 100%;
+  height: 40px;
+}
+
+
+/* ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+} */
+.nav{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  
+}
+.nav .l1{
+  width: 25%;
+  height: 100%;
+  background-color: rgb(227, 235, 218);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes color-animation {
+  0% { color: #ff9797; } 
+  25% { color: #ffb5b5; } 
+  50% { color: #ffd2d2; } 
+  75% { color: #ff5151; } 
+  100% { color: #ff7575; } 
+}
+.nav .l1 a{
+  animation-name: color-animation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+  padding: 15px 20%;
+  color: #000000;
+  
+}
+.nav .l1 a:hover{
+  background-color: white;
+  border-bottom: 3px solid #ffd2d2;
+}
+.wall{
+  margin: 0 auto;
+  width: 80%;
+  height: 5000px;
+  backdrop-filter: blur(10px);
+  
+}
+.wall h2{
+  margin: 20px;
+  display: block;
+  margin: 50px auto 80px;
+  height: 70px;
+  text-align: center;
+  background: linear-gradient(to right, #ffb5b5, #ffecec);
+  line-height: 70px;
+  border: 3px solid #ffffff;
+
+}
+.wall .contain1{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+/* #about img{
+	width: 110px;
+	height: 10.625rem;
+} */
+.w1 .img1  img{ 
+   width: 110px;
+  height: 170px;
+  background-size: contain; 
+ } 
+ 
+.w1 .text1{
+  /* width: 400px;
+  height: 200px; */
+  flex: 2;
+  background: linear-gradient(to right, #ffd2d2, #ffecec);
+  border-radius: 5%;
+  padding: 40px 15px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease-in-out;
+}
+.w1 .text1:nth-child(2){
+	flex: 1;
+}
+.w1 .text1:hover {
+  transform: translate(-5px, -5px);
+}
+.w1 .img1{
+	flex: 1;
+}
+.w2 .contain2{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.w2 .inbox{
+  width: 210px;
+  height: 400ppx;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease-in-out;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+
+}
+.w2 .inbox:hover {
+  transform: translate(-5px, -5px);
+}
+.w2 .text1{
+
+  padding: 10px 30px;
+  background: linear-gradient(to bottom, #ffd2d2, #ffecec);
+}
+.w2 .img1{
+  width: 210px;
+  height: 210px;
+}
+.w2 .img1 img{
+  width: 210px;
+  height: 210px;
+  background-size: contain;
+  
+} 
+
+.w3 .contain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+
+}
+.w3 .img3{
+  margin-bottom: 50px;
+}
+.w3 .contain img {
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  border-radius: 10px;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.w3 .contain img:hover {
+  transform: scale(1.1);
+}
+
+.w4 .contain{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.w4 img{
+	float:left;
+  width: 256px;
+  height: 192px;
+  background-size: contain;
+  border-radius: 5%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.pic p {
+  text-align: justify;
+  padding-left: 300px
+}
+
+.w4 img:hover {
+  transform: scale(1.2) rotate(360deg);
+}
+
+h2 {
+    font-size: 32px;
+    margin-top: 40px;
+	color: #ffffff;
+	text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #ff557f, 0 0 7px #ff557f, 0 0 10px #ff557f; /* 为文本添加多个投影效果 */
+	animation-name: shadow; /* 应用动画 */
+	animation-duration: 3s; /* 持续时间为 3 秒 */
+	animation-iteration-count: infinite; 
+	
+}
+
+section {
+    padding: 20px;
+}
+
+section {
+    /* background-color: #eee; */
+    /* backdrop-filter: blur(10px); */
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+.slideshow-container {
+      max-width: 1500px;
+      position: relative;
+      margin: 0;
+      height: 25rem;
+    }
+    
+#about img{
+	width: 165px;
+	height: 255px;
+	flex: 1;
+
+}	
+.mySlides img {
+  height: 100%;
+   width: 100%;
+}	
+	
+	
+    .mySlides {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+    }
+    
+    .prev,
+    .next {
+      position: absolute;
+      bottom: 0%;
+      transform: translateY(-50%);
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 1s ease;
+      border-radius: 0 3px 3px 0;
+      cursor: pointer;
+    }
+    
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .fade {
+      animation-name: fade;
+      animation-duration: 3s;
+    }
+    
+    @keyframes fade {
+      from {
+        opacity: 0.4;
+      }
+    
+      to {
+        opacity: 1;
+      }
+    }
+	.photo-container {
+	  width: 70%;
+	  height: 200px;
+	  overflow: scroll;
+	  white-space: nowrap;
+	}
+	
+	.photo-container img {
+	  display: inline-block;
+	  width: 70%;
+	  height: 100%;
+	}
+	.photo-container {
+	  width: 100%;
+	  height: 200px;
+	  overflow: hidden;
+	}
+	.photo-container img {
+	  display: inline-block;
+	  width: 50%;
+	  height: 100%;
+	  animation: scroll 8s linear infinite;
+	}
+	
+	@keyframes scroll {
+	  0% { transform: translateX(0); }
+	  100% { transform: translateX(-300%); }
+	}
